@@ -114,8 +114,4 @@ $(function(){
     $(".skillInput,.checkbox,.songInput").change(function() {
         simulate();
     });
-
-    $("#simulate").click(function(event) {
-        simulate();
-    });
 });
