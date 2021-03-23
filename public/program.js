@@ -111,7 +111,11 @@ function simulate(){
 $(function(){
     simulate();
 
-    $(".skillInput,.checkbox,.songInput").change(function() {
+    $(".checkbox").change(function() {
+        simulate();
+    })
+    $(".skillInput,.songInput").change(function() {
+        $(this).blur();
         simulate();
     });
 });
