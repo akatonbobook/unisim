@@ -2,10 +2,22 @@
     width: 4em;
 }
 
+#result {
+    white-space: nowrap;
+}
+
 .cardContainer {
+    white-space: nowrap;
     width: fit-content;
     border-style: double;
     padding: 5px;
+}
+
+
+.skillHeadContainer {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
 }
 
 .skillHeading {
@@ -27,10 +39,11 @@
 }
 
 .switchframe {
+    margin: 0 10px 3px;
     line-height: 18px;
     letter-spacing: 0;
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
 
     position: relative; 
     width: 36px;
