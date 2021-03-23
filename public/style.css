@@ -1,0 +1,72 @@
+.skillInput {
+    width: 4em;
+}
+
+.cardContainer {
+    width: fit-content;
+    border-style: double;
+    padding: 5px;
+}
+
+.skillHeading {
+    font: bold 16px;
+    margin: 5px 0px;
+}
+
+.container {
+    margin: 5px 0px;
+}
+
+.expectation {
+    font: bold;
+    margin: 5px 0px;
+}
+
+.skillDescription {
+    margin: 5px 0px;
+}
+
+.switchframe {
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: center;
+    font-size: 10px;
+
+    position: relative; 
+    width: 36px;
+    background: #fff;
+}
+
+.switchframe input[type="checkbox"] {
+    display: none;
+}
+
+.switchframe label {
+    display: block;
+    box-sizing: border-box;
+    height: 18px;
+    border: 2px solid #999999;
+    border-radius: 9px;
+}
+
+.switchframe input[type="checkbox"]:checked + label {
+    border-color: #78bd78;
+}
+
+.switchframe #swImg {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: #999999;
+    border-radius: 9px;
+    transition: .2s;
+}
+
+.switchframe input[type="checkbox"]:checked ~ #swImg {
+    pointer-events: none;
+    transform: translateX(18px);
+    background: #78bd78;
+}
