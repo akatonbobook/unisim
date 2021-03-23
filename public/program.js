@@ -117,6 +117,7 @@ $(function(){
         value = $(this).attr("min") ? $(this).attr("min") > value ? $(this).attr("min") : value : value;
         value = $(this).attr("max") ? $(this).attr("max") < value ? $(this).attr("max") : value : value;
         $(this).val(+value);
+        console.log("wheel");
         simulate();
     });
 
