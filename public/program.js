@@ -19,8 +19,6 @@ class ScoreSkill {
                 var true_pro = this.calcTimesPro(song-this.span-this.duration).slice().map(p => this.pro*p);
                 true_pro.unshift(0);
                 var false_pro = this.calcTimesPro(song-this.span).slice().map(p => (1-this.pro)*p);
-                console.log(true_pro);
-                console.log(false_pro);
                 for(var i = 0; i<false_pro.length; i++){
                     true_pro[i] += false_pro[i];
                 }
@@ -93,14 +91,12 @@ function simulate(){
         }
 
         timesData["data"]["datasets"].push(dataset);
-        console.log(skill.calcTimesPro(+($("#songTimeInput").val())));
     });
     $("#partyExpectation").html("x" + party.toFixed(4));
     var times = [0];
     timesData["data"]["datasets"].forEach(dataset => {
         times.push(dataset["data"].length);
     });
-    console.log(Math.max(...times));
     timesData["data"]["labels"] = [...Array(Math.max(...times))].map((_, i) => i);
     if(window.chart){
         window.chart.destroy();
@@ -117,15 +113,20 @@ $(function(){
         value = $(this).attr("min") ? $(this).attr("min") > value ? $(this).attr("min") : value : value;
         value = $(this).attr("max") ? $(this).attr("max") < value ? $(this).attr("max") : value : value;
         $(this).val(+value);
-        console.log("wheel");
-        simulate();
+        if($(this).parents(".cardContainer").find("input[type='checkbox'][id*='setting']:checked").val() || $(this).hasClass("songInput")){
+            simulate();
+        }
     });
 
     $(".checkbox").change(function() {
-        simulate();
+        if($(this).parents(".cardContainer").find("input[type='checkbox'][id*='setting']:checked").val()){
+            simulate();
+        }
     })
     $(".skillInput,.songInput").change(function() {
         $(this).blur();
-        simulate();
+        if($(this).parents(".cardContainer").find("input[type='checkbox'][id*='setting']:checked").val() || $(this).hasClass("songInput")){
+            simulate();
+        }
     });
 });
