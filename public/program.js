@@ -111,6 +111,14 @@ function simulate(){
 $(function(){
     simulate();
 
+    $(".skillInput,.songInput").on("wheel", function(e) {
+        var delta = e.originalEvent.deltaY < 0 ? 1 : -1;
+        var value = +($(this).val()) + delta;
+        value = $(this).attr("min") ? $(this).attr("min") > value ? $(this).attr("min") : value : value;
+        value = $(this).attr("max") ? $(this).attr("max") < value ? $(this).attr("max") : value : value;
+        $(this).val(+value);
+    });
+
     $(".checkbox").change(function() {
         simulate();
     })
