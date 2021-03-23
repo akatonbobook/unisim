@@ -4,13 +4,15 @@
 
 #result {
     white-space: nowrap;
+    width: 600px;
 }
 
 .cardContainer {
     white-space: nowrap;
     width: fit-content;
-    border-style: double;
+    border-style: solid;
     padding: 5px;
+    border-radius: 10px;
 }
 
 
@@ -22,7 +24,7 @@
 
 .skillHeading {
     font: bold 16px;
-    margin: 5px 0px;
+    margin: 0;
 }
 
 .container {
@@ -31,7 +33,7 @@
 
 .expectation {
     font: bold;
-    margin: 5px 0px;
+    margin: 0px 0px;
 }
 
 .skillDescription {
@@ -47,7 +49,7 @@
 
     position: relative; 
     width: 36px;
-    background: #fff;
+    background: #00000000;
 }
 
 .switchframe input[type="checkbox"] {
@@ -58,12 +60,12 @@
     display: block;
     box-sizing: border-box;
     height: 18px;
-    border: 2px solid #999999;
+    border: 2px solid #555555;
     border-radius: 9px;
 }
 
 .switchframe input[type="checkbox"]:checked + label {
-    border-color: #78bd78;
+    border-color: #555555;
 }
 
 .switchframe #swImg {
@@ -73,7 +75,7 @@
     left: 0;
     width: 18px;
     height: 18px;
-    background: #999999;
+    background: #555555;
     border-radius: 9px;
     transition: .2s;
 }
@@ -81,5 +83,33 @@
 .switchframe input[type="checkbox"]:checked ~ #swImg {
     pointer-events: none;
     transform: translateX(18px);
-    background: #78bd78;
+    background: #ffffff;
+}
+
+.songInput {
+    width: 4em;
+}
+
+.songTime {
+    margin: 2px 0;
+}
+
+#card-1 {
+    background: #ff000078;
+}
+
+#card-2 {
+    background: #0000ff66;
+}
+
+#card-3 {
+    background: #00cc0066;
+}
+
+#card-4 {
+    background: #ffff0066;
+}
+
+#card-5 {
+    background: #ff00ff66;
 }
