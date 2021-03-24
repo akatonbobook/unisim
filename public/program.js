@@ -119,9 +119,7 @@ $(function(){
     });
 
     $(".checkbox").change(function() {
-        if($(this).parents(".cardContainer").find("input[type='checkbox'][id*='setting']:checked").val()){
-            simulate();
-        }
+        simulate();
     })
     $(".skillInput,.songInput").change(function() {
         $(this).blur();
