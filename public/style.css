@@ -32,8 +32,8 @@
 }
 
 .expectation {
-    font: bold;
-    margin: 0px 0px;
+    font: 25px bold;
+    margin: 0px auto;
 }
 
 .skillDescription {
@@ -112,4 +112,11 @@
 
 #card-5 {
     background: #ff00ff66;
+}
+
+.content {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 600px;
 }

@@ -10,11 +10,11 @@
         <link rel="stylesheet" href="public/style.css">
     </head>
     <body>
-        <div id="result">
+        <div id="result" class="content">
             <canvas id="timesBarChart"></canvas>
             <p class="expectation">編成期待値　<span id="partyExpectation" class="expectation"></span></p>
         </div>
-        <div id="inputContainer">
+        <div id="inputContainer" class="content">
             <script>
                 for(var i = 0; i < 5; i++){
                     var h = '<div class="cardContainer container" id="card-' + (1+i) + '">'
@@ -43,14 +43,9 @@
                     document.write(h);
                 }
             </script>
-            <div class="songContainer">
-                <p class="songTime">曲の長さ<input type="number" min="0" value="145" id="songTimeInput" class="songInput songTime">秒</p>
-            </div>
         </div>
-        <!--
-        <div id="controlContainer" class="container">
-            <button id="simulate" type="button">シミュレート</button>
+        <div class="songContainer content">
+            <p class="songTime">曲の長さ<input type="number" min="0" value="145" id="songTimeInput" class="songInput songTime">秒</p>
         </div>
-        -->
     </body>
 </html>
